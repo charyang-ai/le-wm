@@ -1,0 +1,161 @@
+{
+  "cube": {
+    "success_rate": 68.0,
+    "episodes": 50,
+    "cem_solve_s": [
+      42.4699,
+      12.7903
+    ],
+    "plans": []
+  },
+  "cube_random": {
+    "success_rate": 48.0,
+    "episodes": 50,
+    "cem_solve_s": [],
+    "plans": []
+  },
+  "lewm_tworoom_w7900": {
+    "success_rate": 92.0,
+    "episodes": 50,
+    "cem_solve_s": [
+      56.2933,
+      7.5471
+    ],
+    "plans": []
+  },
+  "lewm_tworoom_w7900_seed1": {
+    "success_rate": 94.0,
+    "episodes": 50,
+    "cem_solve_s": [
+      54.7522,
+      3.2383
+    ],
+    "plans": []
+  },
+  "lewm_tworoom_w7900_seed2": {
+    "success_rate": 94.0,
+    "episodes": 50,
+    "cem_solve_s": [
+      54.8266,
+      5.3958
+    ],
+    "plans": []
+  },
+  "pusht": {
+    "success_rate": 94.0,
+    "episodes": 50,
+    "cem_solve_s": [
+      40.388,
+      8.7282
+    ],
+    "plans": []
+  },
+  "pusht_random": {
+    "success_rate": 6.0,
+    "episodes": 50,
+    "cem_solve_s": [],
+    "plans": []
+  },
+  "reacher": {
+    "success_rate": 76.0,
+    "episodes": 50,
+    "cem_solve_s": [
+      40.5951,
+      24.6445
+    ],
+    "plans": []
+  },
+  "reacher_mj350": {
+    "success_rate": 76.0,
+    "episodes": 50,
+    "cem_solve_s": [
+      41.0679,
+      31.7077
+    ],
+    "plans": []
+  },
+  "reacher_mujoco401": {
+    "success_rate": 66.0,
+    "episodes": 50,
+    "cem_solve_s": [
+      40.4814,
+      24.661
+    ],
+    "plans": []
+  },
+  "reacher_random": {
+    "success_rate": 4.0,
+    "episodes": 50,
+    "cem_solve_s": [],
+    "plans": []
+  },
+  "reacher_random_mujoco401": {
+    "success_rate": 14.0,
+    "episodes": 50,
+    "cem_solve_s": [],
+    "plans": []
+  },
+  "reacher_seed1": {
+    "success_rate": 82.0,
+    "episodes": 50,
+    "cem_solve_s": [
+      72.704,
+      31.1619
+    ],
+    "plans": []
+  },
+  "reacher_seed2": {
+    "success_rate": 80.0,
+    "episodes": 50,
+    "cem_solve_s": [
+      40.4462,
+      31.3623
+    ],
+    "plans": []
+  },
+  "tworoom": {
+    "success_rate": 86.0,
+    "episodes": 50,
+    "cem_solve_s": [
+      46.9986,
+      6.3691
+    ],
+    "plans": []
+  },
+  "tworoom_random": {
+    "success_rate": 18.0,
+    "episodes": 50,
+    "cem_solve_s": [],
+    "plans": []
+  },
+  "tworoom_seed1": {
+    "success_rate": 96.0,
+    "episodes": 50,
+    "cem_solve_s": [
+      40.5972,
+      5.5634
+    ],
+    "plans": []
+  },
+  "tworoom_seed1_random": {
+    "success_rate": 30.0,
+    "episodes": 50,
+    "cem_solve_s": [],
+    "plans": []
+  },
+  "tworoom_seed2": {
+    "success_rate": 84.0,
+    "episodes": 50,
+    "cem_solve_s": [
+      40.5172,
+      10.3168
+    ],
+    "plans": []
+  },
+  "tworoom_seed2_random": {
+    "success_rate": 32.0,
+    "episodes": 50,
+    "cem_solve_s": [],
+    "plans": []
+  }
+}

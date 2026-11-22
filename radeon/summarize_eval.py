@@ -29,7 +29,7 @@ def parse(path: Path) -> dict:
 def main() -> None:
     root = Path(sys.argv[1] if len(sys.argv) > 1 else "results/eval")
     runs = {p.stem: parse(p) for p in sorted(root.glob("*.log"))}
-    (root.parent / "eval_summary.json").write_text(json.dumps(runs, indent=2), encoding="utf-8")
+    (root.parent / "eval_summary.json").write_text(json.dumps(runs, indent=2) + "\n", encoding="utf-8", newline="\n")
     rows = ["| run | success | episodes | paper | CEM solve times (s) |", "| --- | --- | --- | --- | --- |"]
     for tag, r in runs.items():
         env = next((e for e in PAPER if e in tag), None)
@@ -37,7 +37,7 @@ def main() -> None:
         rate = "—" if r["success_rate"] is None else f"{r['success_rate']:g}%"
         solves = ", ".join(f"{t:.1f}" for t in r["cem_solve_s"]) or "—"
         rows.append(f"| `{tag}` | {rate} | {r['episodes'] or '—'} | {paper if paper is not None else '—'} | {solves} |")
-    (root.parent / "eval_summary.md").write_text("\n".join(rows) + "\n", encoding="utf-8")
+    (root.parent / "eval_summary.md").write_text("\n".join(rows) + "\n", encoding="utf-8", newline="\n")
     print("\n".join(rows))
 
 

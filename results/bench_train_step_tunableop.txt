@@ -1,0 +1,36 @@
+/opt/venv/lib/python3.12/site-packages/apex/transformer/functional/fused_rope.py:54: UserWarning: Using the native apex kernel for RoPE.
+  warnings.warn("Using the native apex kernel for RoPE.", UserWarning)
+12:50:18 | INFO  | __init__.py | JAX version 0.12.1 available.
+12:50:18 | INFO  | atomic_chec~| [atomic_save] installed crash-safe checkpoint plugin (write to sibling .tmp + fsync + atomic rename)
+12:50:18 | INFO  | utils.py    | Created ViT-tiny from scratch with config: {'hidden_size': 192, 'num_hidden_layers': 12, 'num_attention_heads': 3, 'intermediate_size': 768, 'image_size': 224, 'patch_size': 14}
+MIOpen(HIP): Warning [ParseAndLoadDb] File is unreadable: "/opt/venv/lib/python3.12/site-packages/_rocm_sdk_libraries/share/miopen/db/gfx1100_48.HIP.fdb.txt"
+params 18.034478 M
+train step B=128: 279.2 ms  (3.58 it/s)
+/opt/venv/lib/python3.12/site-packages/torch/profiler/profiler.py:224: UserWarning: Warning: Profiler clears events at the end of each cycle.Only events from the current cycle will be reported.To keep events across cycles, set acc_events=True.
+  _warn_once(
+[W1120 12:50:28.246718972 collection.cpp:1148] Warning: ROCTracer produced duplicate flow start: 1 (function operator())
+----------------------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                                  Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+----------------------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                          aten::linear         0.19%       1.584ms         4.52%      37.044ms      57.167us       0.000us         0.00%     230.664ms     355.963us           648  
+                   autograd::engine::evaluate_function: AddmmBackward0         0.34%       2.768ms         3.48%      28.523ms      94.134us       0.000us         0.00%     206.659ms     682.042us           303  
+                                                              aten::mm         1.96%      16.067ms         2.41%      19.690ms      29.432us     186.329ms        22.88%     186.329ms     278.519us           669  
+                                                        AddmmBackward0         0.18%       1.497ms         2.55%      20.845ms      68.796us       0.000us         0.00%     185.394ms     611.860us           303  
+autograd::engine::evaluate_function: ScaledDotProductFlashAttention...         0.08%     623.661us         0.44%       3.582ms      66.330us       0.000us         0.00%     115.690ms       2.142ms            54  
+                               ScaledDotProductFlashAttentionBackward0         0.03%     221.604us         0.36%       2.958ms      54.781us       0.000us         0.00%     115.690ms       2.142ms            54  
+                    aten::_scaled_dot_product_flash_attention_backward         0.06%     510.240us         0.33%       2.737ms      50.677us       0.000us         0.00%     115.690ms       2.142ms            54  
+                                       aten::_flash_attention_backward         0.08%     675.021us         0.24%       1.935ms      35.833us     115.690ms        14.21%     115.690ms       2.142ms            54  
+                                                           aten::addmm         1.04%       8.488ms         1.34%      10.992ms      36.277us      99.108ms        12.17%      99.108ms     327.090us           303  
+         autograd::engine::evaluate_function: NativeLayerNormBackward0         0.16%       1.269ms         0.63%       5.182ms      34.547us       0.000us         0.00%      87.895ms     585.967us           150  
+                                                      bwd_kernel_dk_dv         0.00%       0.000us         0.00%       0.000us       0.000us      74.133ms         9.10%      74.133ms       2.059ms            36  
+                                                           aten::copy_         0.56%       4.572ms         1.23%      10.106ms       5.288us      70.418ms         8.65%      70.418ms      36.849us          1911  
+                                                              aten::to         0.12%     983.248us         2.13%      17.450ms       6.228us       0.000us         0.00%      70.229ms      25.064us          2802  
+                                                        aten::_to_copy         0.43%       3.498ms         2.01%      16.467ms       8.768us       0.000us         0.00%      70.229ms      37.396us          1878  
+                                                            aten::add_         0.14%       1.165ms         0.22%       1.822ms       1.646us      62.876ms         7.72%      62.876ms      56.799us          1107  
+void at::native::vectorized_elementwise_kernel<4, at::native::CUDAF...         0.00%       0.000us         0.00%       0.000us       0.000us      62.213ms         7.64%      62.213ms     334.476us           186  
+                                              NativeLayerNormBackward0         0.04%     362.708us         0.40%       3.274ms      21.829us       0.000us         0.00%      58.443ms     389.620us           150  
+                                      aten::native_layer_norm_backward         0.12%     967.357us         0.36%       2.912ms      19.411us      58.443ms         7.18%      58.443ms     389.620us           150  
+----------------------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 818.675ms
+Self CUDA time total: 814.279ms
+
